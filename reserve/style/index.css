@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@font-face {
+  font-family: Calibre-SemiBold;
+  src: url('../fonts/Calibre-SemiBold.21cc3335.woff') format("woff"),
+    url('../fonts/Calibre-SemiBold.2c27f793.ttf') format("truetype"),
+    url('../fonts/Calibre-Semibold.320db03b.svg#Calibre-Semibold') format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  height: 100%;
+  /* background-image: linear-gradient(to bottom, #800020, #2f0064a1), url('../assets/bg.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fafafa;
+}
+.error {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-shadow: black 1px 1px 5px;
+}
+.show {
+  display: none;
+}
+.section-text {
+  width: '100%';
+  text-align: center;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+nav {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.head {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.input {
+  width: 100%;
+  height: 50px;
+  border: solid black 1px;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #800020;
+  font-size: 16px;
+  box-shadow: 5px 5px #800020;
+}
+.centered{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background: #800020;
+  /* filter: blur(2px) contrast(20); */
+  z-index: 9999;
+}
+.blob-1,.blob-2{
+  width:70px;
+  height:70px;
+  position:absolute;
+  background:#fff;
+  border-radius:50%;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  
+}
+.blob-1{
+  left:20%;
+  animation:osc-l 2.5s ease infinite;
+}
+.blob-2{
+  left:80%;
+  animation:osc-r 2.5s ease infinite;
+  background: white;
+}
+@keyframes osc-l{
+  0%{left:20%;}
+  50%{left:50%;}
+  100%{left:20%;}
+}
+@keyframes osc-r{
+  0%{left:80%;}
+  50%{left:50%;}
+  100%{left:80%;}
+}
+#section {
+  width: 100%;
+  height: 50px;
+  border: solid black 1px;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: gray;
+  font-size: 16px;
+  box-shadow: 5px 5px #800020;
+  background-color: white;
+}
+
+.button {
+  width: 200px;
+  height: 50px;
+  border: solid black 1px;
+  color: #800020;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 5px 5px #800020;
+  background-color: white;
+}
+.button:hover {
+  width: 200px;
+  height: 50px;
+  border: solid black 1px;
+  color: #800020;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: -5px -5px #800020;
+  background-color: white;
+}
+.loading {
+  width: 200px;
+  height: 40px;
+  border: solid gray 2px;
+  color: gray;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+}
+.heading {
+  letter-spacing: 3px;
+  font-family: Calibre-SemiBold, sans-serif;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 20px;
+}
+.thank {
+  color: white;
+  font-size: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.button:hover {
+  background-color: #800020;
+  color: white;
+}
+.brand {
+  letter-spacing: 9px;
+  font-family: Calibre-SemiBold, sans-serif;
+  font-size: 30px;
+  margin-top: 25px;
+  color: white;
+}
+.nav {
+  letter-spacing: 3px;
+  font-family: Calibre-SemiBold, sans-serif;
+  font-size: 10px;
+  color: white;
+}
+
+@media only screen and (max-width: 739px) {
+  .cards-container {
+    display: block;
+    width: 100%;
+    display: flex;
+  }
+  .logo {
+    width: 80px;
+  }
+  .thank {
+    color: white;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  h6 {
+    display: none;
+  }
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 500px;
+    height: auto;
+  }
+
+  .card h6 {
+    opacity: 0.6;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .card h2 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+  }
+
+  .card-preview {
+    background-color: #800020;
+    color: #fff;
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  .card-preview a {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 30px;
+    text-decoration: none;
+  }
+
+  .card-info {
+    padding: 30px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .progress-container {
+    /* position: absolute;
+    top: 30px;
+    right: 30px; */
+    text-align: right;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .progress {
+    background-color: #ddd;
+    border-radius: 3px;
+    height: 5px;
+    width: 100%;
+  }
+
+  .progressGreen {
+    border-radius: 3px;
+    background-color: #800020;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 66%;
+  }
+
+  .progress-text {
+    font-size: 10px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+  }
+
+  .btn {
+    background-color: #2ac769;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 25px;
+    position: initial;
+    bottom: 30px;
+    right: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .see {
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 739px) {
+  .main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    /* background-color: red; */
+  }
+  .logo {
+    width: 100px;
+  }
+  .cards-container {
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  h6 {
+    display: none;
+  }
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 300px;
+    height: auto;
+  }
+
+  .card h6 {
+    opacity: 0.6;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .card h2 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+  }
+
+  .card-preview {
+    background-color: #800020;
+    color: #fff;
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  .card-preview a {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 30px;
+    text-decoration: none;
+  }
+
+  .card-info {
+    padding: 30px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .progress-container {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    text-align: right;
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .progress {
+    background-color: #ddd;
+    border-radius: 3px;
+    height: 5px;
+    width: 100%;
+  }
+
+  .progressGreen {
+    border-radius: 3px;
+    background-color: #800020;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 66%;
+  }
+
+  .progress-text {
+    font-size: 10px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+  }
+
+  .btn {
+    background-color: #2ac769;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 25px;
+    position: initial;
+    bottom: 30px;
+    right: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .see {
+    padding-top: 20px;
+  }
+}

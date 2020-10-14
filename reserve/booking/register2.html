@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/logo.png"
+    />
+    <link rel="stylesheet" href='../style/index.css' />
+</head>
+<body style="height: 100vh; overflow: hidden;">
+  <nav>
+    <div>
+      <a style="text-decoration: none; padding: 10px" href="../index.html"
+        ><img style="margin-top: 20px" style="width: 100px" src="../assets/logo.png" class="logo"
+      /></a>
+    </div>
+    <div></div>
+  </nav>
+  
+    <div class="main">
+        <!-- <p class="heading">Please select a service you'll like to attend.</p> -->
+    
+        <form style='margin-top: 0px;' name='reg2' method="GET" action="" id="reg2">
+            <h3 class="head">Book a seat in the Middle Section</h3>
+            <input required class="input" placeholder="Full Name" />
+            <input
+              required
+              type="text"
+              class="input"
+              placeholder="Place of residence"
+            />
+            <input
+              type="tel"
+              maxlength="10"
+              required
+              class="input"
+              placeholder="Phone Number"
+            />
+        <button class="button" id="sub2">Submit</button>
+        </form>
+
+        <div id='error' class="error show">
+          Sorry! Your name is already registered
+        </div>
+    </div>
+    
+    <img src="../assets/blob1.svg" style="position: fixed; bottom: -90px; right: -80px; z-index: -999;" />
+ 
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="../firebase/config.js"></script>
+    <script src='../js/index2.js'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171589737-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171589737-1');
+</script>
+
+</body>
+</html>

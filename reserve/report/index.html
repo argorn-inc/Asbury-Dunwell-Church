@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Admin</title>
+    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo.png" />
+    <!-- Data Tables Files -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+    />
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"
+    ></script>
+    <script src=" https://cdn.datatables.net/buttons/1.6.0/js/dataTables.buttons.min.js "></script>
+    <script src=" https://cdn.datatables.net/buttons/1.6.0/js/buttons.flash.min.js "></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js "></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js "></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js "></script>
+    <script src=" https://cdn.datatables.net/buttons/1.6.0/js/buttons.html5.min.js "></script>
+    <script src=" https://cdn.datatables.net/buttons/1.6.0/js/buttons.print.min.js "></script>
+    <script>
+      function printcontent(print_target_content) {
+        var restore_page = document.body.innerHTML;
+        var print_div_content = document.getElementById(print_target_content)
+          .innerHTML;
+        document.body.innerHTML = print_div_content;
+        window.print();
+        document.body.innerHTML = restore_page;
+      }
+    </script>
+  </head>
+  <body style="height: 100vh; background: white;">
+    <nav style="padding: 20px">
+      <div>
+        <a style="text-decoration: none" href="index.html"
+          ><img style="width: 80px" src="../assets/logo.png" class="logo"
+        /></a>
+      </div>
+      <div></div>
+    </nav>
+
+    <div style="padding: 20px;">
+      <!-- <div
+        style="
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 20px;
+        "
+      >
+        <button
+          onclick="sortby('first')"
+          style="
+            width: 120px;
+            height: 40px;
+            border: none;
+            background-color: #2a265f;
+            color: white;
+            font-size: 13px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-right: 15px;
+          "
+        >
+          1st
+        </button>
+        <button
+          onclick="sortby('second')"
+          style="
+            width: 120px;
+            height: 40px;
+            border: none;
+            background-color: #2a265f;
+            color: white;
+            font-size: 13px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-right: 15px;
+          "
+        >
+          2nd
+        </button>
+        <button
+          onclick="sortby('third')"
+          style="
+            width: 120px;
+            height: 40px;
+            border: none;
+            background-color: #2a265f;
+            color: white;
+            font-size: 13px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-right: 15px;
+          "
+        >
+          3rd
+        </button> -->
+        <button
+          onclick="printcontent('print_target_content')"
+          style="
+            width: 120px;
+            height: 40px;
+            border: none;
+            background-color: #2a265f;
+            color: white;
+            font-size: 18px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-right: 15px;
+          "
+        >
+          Print
+        </button>
+        <button
+          id="print"
+          style="
+            width: 120px;
+            height: 40px;
+            border: none;
+            background-color: #2a265f;
+            color: white;
+            font-size: 18px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-right: 15px;
+          "
+        >
+          Excel
+        </button>
+      </div>
+      <div id="print_target_content">
+        <div id="tablewrap">
+          <table id="example" class="display" style="width: 100%;">
+            <thead>
+              <tr>
+                <th>Seat Number</th>
+                <th>Name</th>
+                <th>Digital Address</th>
+                <th>Phone Number</th>
+                
+                <th>City/Town</th>
+
+                <th>Booking Date</th>
+              </tr>
+            </thead>
+            <tbody id="tab"></tbody>
+            <tfoot>
+              <tr>
+                <th>Seat Number</th>
+                <th>Name</th>
+                <th>Digital Address</th>
+                <th>Phone Number</th>
+                
+                <th>City/Town</th>
+
+                <th>Booking Date</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="../firebase/config.js"></script>
+
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#example").DataTable({
+          dom: "Bfrtip",
+          buttons: ["copy", "csv", "excel", "pdf", "print"],
+        });
+      });
+    </script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

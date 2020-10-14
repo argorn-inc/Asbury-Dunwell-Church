@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Succesful</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo.png" />
+    <link rel="stylesheet" href="../style/index.css" />
+  </head>
+  <body style="height: 100vh; overflow: hidden">
+    <nav>
+      <div>
+        <a style="text-decoration: none; padding: 10px" href="../index.html"
+          ><img
+            style="margin-top: 20px"
+            style="width: 100px"
+            src="../assets/logo.png"
+            class="logo"
+        /></a>
+      </div>
+      <div></div>
+    </nav>
+
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      "
+    >
+      <!-- <p class="heading">Please select a service you'll like to attend.</p> -->
+
+      <h2
+        style="text-align: center; margin-top: -300px; color: #800020"
+        class="thank"
+      >
+        Thank you! <br />
+        Your Seat Number:
+        <div>
+          <span
+            id="seat"
+            style="
+              background-color: #800020;
+              width: 150px;
+              height: 150px;
+              text-align: center;
+              color: white;
+              padding-left: 22px;
+              padding-right: 22px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              margin-top: 40px;
+              border-radius: 100px;
+            "
+            ></span
+          >
+          <div style="margin-top: 15px; padding: 5px">
+            <p style="font-size: 15px">
+              Kindly take a screenshot for inspection on Sunday <br />
+              2020/10/04
+            </p>
+          </div>
+        </div>
+      </h2>
+    </div>
+
+    <img
+      src="../assets/blob1.svg"
+      style="
+        width: 300px;
+        height: 300px;
+        position: fixed;
+        bottom: -90px;
+        right: -80px;
+        z-index: -999;
+      "
+    />
+
+    <script src="../js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        var prmstr = window.location.search.split("=");
+        var sid = prmstr[1];
+        // var args = JSON.parse(sessionStorage.getItem(sid));
+        console.log(sid);
+        document.getElementById("seat").innerHTML = sid
+        // sessionStorage.removeItem(sid);
+        // and so on
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-171589737-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-171589737-1");
+    </script>
+  </body>
+</html>

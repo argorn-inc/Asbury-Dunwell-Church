@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADC CHURCH</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.png" />
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a style="text-decoration: none" href="index.html"
+          ><img style="width: 100px" src="./assets/logo.png" class="logo"
+        /></a>
+      </div>
+      <div></div>
+    </nav>
+    <div class="main">
+      <form style='margin-top: 0px;' name="reg1" method="GET" action="" id="reg1">
+        <h3 class="head">Book a seat for this sunday</h3>
+        <div class="progress-container">
+          <!-- <div class="progress">
+            <div
+              class="progressgreen"
+              style="
+                background-color: #2a265f;
+                width: 60%;
+                height: 5px;
+                border-radius: 10px;
+              "
+            ></div>
+          </div>
+          <span class="progress-text"> 60/80 attendees </span> -->
+        </div>
+        
+        <input required class="input" placeholder="Full Name" />
+        <div id="seats"></div>
+        <input
+          required
+          type="text"
+          class="input"
+          placeholder="Place of residence"
+        />
+        <input
+          type="tel"
+          maxlength="10"
+          required
+          class="input"
+          placeholder="Phone Number"
+        />
+        <input
+          type="text"
+          class="input"
+          placeholder="Digital Address (if available)"
+        />
+        <button class="button" id="sub1">Submit</button>
+      </form>
+      <div id='error' class="error show">
+        Sorry! Your name is already registered
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="./firebase/config.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/jquery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-171589737-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-171589737-1");
+    </script>
+  </body>
+</html>
