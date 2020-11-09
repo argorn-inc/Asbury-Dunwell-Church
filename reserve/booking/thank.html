@@ -58,7 +58,7 @@
           <div style="margin-top: 15px; padding: 5px">
             <p style="font-size: 15px">
               Kindly take a screenshot for inspection on Sunday <br />
-              25/10/2020
+              <div style="font-size: 12px;" id="timestamp"></div>
             </p>
           </div>
         </div>
@@ -88,6 +88,8 @@
         // sessionStorage.removeItem(sid);
         // and so on
       });
+      let dt = new Date()
+      document.getElementById("timestamp").innerHTML = dt;
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
